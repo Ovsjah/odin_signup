@@ -1,24 +1,4 @@
-# README
+# [Odin Signup](https://www.theodinproject.com/courses/html-and-css/lessons/html-forms) [(Heroku deployed)](https://ovsjazz-odin-signup.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## About
+The Odin's project on creating pure html5, css3 signin/signup experience.
