@@ -1,0 +1,7 @@
+<h1 style="text-align: center">
+  email: <%= @user.email %>
+  <br>
+  phone: +<%= @user.phone %>
+  <br>
+  <%= link_to 'Sign out', signout_path, method: :delete %>
+</h1>

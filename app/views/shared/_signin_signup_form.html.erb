@@ -1,0 +1,24 @@
+<div class='auth'>
+  <%= form_with scope: scope, url: url, local: true do |f| %>
+    <%= field_set_tag (scope == :user ? "<h2>Create an account</h2>" : "<h2>Sign in</h2>").html_safe  do %>
+      <p>
+        <strong><%= scope == :user ? "Already have an account?" : "Haven't got an account yet?" %></strong>
+        <%= link_to scope == :user ? signin_path : signup_path do %>
+          <em><%= scope == :user ? "Sign in!" : "Sign up!" %></em>
+        <% end %>
+      </p>
+      <% if scope == :user %>
+        <%= render 'shared/errors' %>
+      <% end %>
+      <%= f.label :email %>
+      <%= f.email_field :email, required: true %>
+      <% if scope == :user %>
+        <%= f.label "Phone (recommended)" %>
+        <%= f.telephone_field :phone, placeholder: "Should include country code" %>
+      <% end %>
+      <%= f.label :password %>
+      <%= f.password_field :password, required: true %>
+      <%= f.submit scope == :user ? "Create Account" : "Sign in" %>
+    <% end %>
+  <% end %>
+</div>
